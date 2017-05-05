@@ -1,0 +1,104 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.sandbox.braintreegateway.com/merchants/7rdg92j7bm7fk5h3/transactions
+    body:
+      encoding: UTF-8
+      string: |
+        <?xml version="1.0" encoding="UTF-8"?>
+        <transaction>
+          <amount>10.00</amount>
+          <channel>Solidus</channel>
+          <options>
+            <store-in-vault-on-success type="boolean">true</store-in-vault-on-success>
+          </options>
+          <payment-method-nonce>fake-valid-nonce</payment-method-nonce>
+          <type>sale</type>
+        </transaction>
+    headers:
+      Accept-Encoding:
+      - gzip
+      Accept:
+      - application/xml
+      User-Agent:
+      - Braintree Ruby Gem 2.75.0
+      X-Apiversion:
+      - '4'
+      Authorization:
+      - Basic bXdqa2t4d2NwMzJja2huZjphOTI5OGY0M2IzMGM2OTlkYjMwNzJjYzRhMDBmN2Y0OQ==
+      Content-Type:
+      - application/xml
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Date:
+      - Sat, 20 May 2017 07:12:07 GMT
+      Content-Type:
+      - application/xml; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      X-Frame-Options:
+      - SAMEORIGIN
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Authentication:
+      - basic_auth
+      X-User:
+      - 3v249hqtptsg744y
+      Vary:
+      - Accept-Encoding
+      Content-Encoding:
+      - gzip
+      Etag:
+      - W/"02bcf640001ffb312ba495acd645fb8b"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 80266a35-61b8-43e9-bbc6-a9141da206be
+      X-Runtime:
+      - '0.460598'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAEfsH1kAA+RYS2/jNhC+768IfGckeZ3EWSjaFigKFH1cdrdAe1lQ4shi
+        Q5EqSTl2f32HoiRLEZWkQA8FerNmPg45D858dPrxVIurI2jDlXzYJNfx5gpk
+        oRiXh4fNl8/fk/3mY/YutZpKQwuLqOzd1VXKWbaHv+SduT2nEX44mbHUtiaj
+        ra2U5n8BS6Ne5LT23EBmqIA06n46WdFqjbudCTeK4KaQffn0XRotxQ5Ma9VK
+        myXxdRynUf/lFDXooqLSEloUTkjwPMZCnSth0yik7U7b5iSgu5JcPGysbmET
+        eesUbek3QZVmiAwoCg3UAiPUXjnfHzYMPy2vYZNt4+SOxDdkG3+O7z4k2w/x
+        3e8YgXFBt75t2D9bf1nQx9lYhR64D5+83X18u0u2u92QPRSXXBtLJK3huQOo
+        FHRdV6i6ofIc0EBNuQjInyA33IZsNZWSIXlJT4uwRlO/0pwLgVU7+hgy8u97
+        aKwGwKpgTIMxoRCcLEjmcrEKEaqggtuQeQ0HvHKhOCm8W8LfjvtdEt+l0VQ0
+        HBsrVZ/XvfJqt4JQ0VR0+ybU+9dQssWk8GKZsEmO0LWylSx0XUaN6cudak3P
+        MyXGc9KSQkYaqi3HcBiwVkANeGXnK0LGL73rNfMTszm1RRXEVLxp/pcl+UKB
+        /GdqcZqdvkOSkoNgpq+FoyGgtdIEY9QoaSDoWoebuD5HZz/jqHoRMJiYZ+0Z
+        6Adv5UVM58bxuNx/KXTQAw6IJ3pGzR/gqxxnjlkmNm20KnA3jMNwO2gH7yz9
+        9vnH5CfXe14Cza3Mj5LEbpqvaVdWWqzg7NsGNUfHMtYQXWgZ4+4kGPwlbOHr
+        UfHCJajExOMKrJ0c9DIireMCuIsf+CsoS0/Es5SgCk5QN8M8z5USQOUmK6kw
+        jiGNgIE/oBekoHqY1VY9gsze69vHBke4//KanMtsFyfb/d61WzntJLss2e+T
+        NOo/+suCRknHyH7lhmK1jN9Ds2i49smslbRVlmzTaCFcYM9ANZKTbTwDd9J+
+        3352E9dqOl755dNlol+kl1NWSnThDjcQXtMDkFaLrLK2MR+iiBps0uY615RL
+        d3H6ir/Gzhk19Ox699casFrZV6EOKjqi/9eNPHwEeeRaSQd4MFSyXJ2QJo32
+        +26noaHInX5RrgD9b6+pgApb4YmRzspHqZ5kGk1kHsQg5/ai95+9qtWYOKzC
+        Qysci5ugnmvGUeDoKU67C3Qi689Lz1qJCWIQ9OEzpsVmiMNMPl4wM+m8uaqS
+        OC2VBWRuu6V0iJNibdHR7svWF5kHtZL/2UJ/k1CMkefYi3VGy5ubu919eXNf
+        JiV7v2e3RVkkKCh3N/u8xFJcXeotH0HWihj2uHLTRn3PKOc3rX/TkIpjWerz
+        jDGM07ZDABrqE+iuJ3JzVNTNG/n6iB8tvPiY6hBr7yEfUIMRGCv/m+E55Gof
+        Q2aG8LijTniOUdjZIKMNxyMt5d7h6LnHo6SPku+RgoZ5U5ubQvNmlVdN9GNH
+        60gjaXCOK0aQuhAXz0APeIbEY2kbxOKRn+3jBgXBmRAghYybrryDOvBW1FBv
+        K91p7VmD/WR5trlRJFzuQYx+rZTwqPezAl+pEkT2SQnOWoMl3Qs8a9VHN+FK
+        gLXZ5PZWT8SndKHFWOStNp74MrD4vDND25qpwgmasObw9nPM4o+AN8Lh5JzG
+        dq3Dx3AvCCxX5Hohg21RBEgxpmXFd+d501oI1Uc/ZwiXyN1a/wpxs9X3ma+u
+        z6TRGmjOfiaOzknSlACtgl631VGm12yNvMpW2FcI3jFXfIBHL9U8YrMOkr37
+        GwAA//8DAEeF/QZpEgAA
+    http_version: 
+  recorded_at: Sat, 20 May 2017 07:12:06 GMT
+recorded_with: VCR 3.0.3

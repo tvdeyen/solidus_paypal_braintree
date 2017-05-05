@@ -1,0 +1,104 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.sandbox.braintreegateway.com/merchants/7rdg92j7bm7fk5h3/transactions
+    body:
+      encoding: UTF-8
+      string: |
+        <?xml version="1.0" encoding="UTF-8"?>
+        <transaction>
+          <amount>10.00</amount>
+          <channel>Solidus</channel>
+          <options>
+            <store-in-vault-on-success type="boolean">true</store-in-vault-on-success>
+          </options>
+          <payment-method-nonce>fake-valid-nonce</payment-method-nonce>
+          <type>sale</type>
+        </transaction>
+    headers:
+      Accept-Encoding:
+      - gzip
+      Accept:
+      - application/xml
+      User-Agent:
+      - Braintree Ruby Gem 2.74.0
+      X-Apiversion:
+      - '4'
+      Authorization:
+      - Basic bXdqa2t4d2NwMzJja2huZjphOTI5OGY0M2IzMGM2OTlkYjMwNzJjYzRhMDBmN2Y0OQ==
+      Content-Type:
+      - application/xml
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Date:
+      - Fri, 05 May 2017 16:03:57 GMT
+      Content-Type:
+      - application/xml; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      X-Frame-Options:
+      - SAMEORIGIN
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Authentication:
+      - basic_auth
+      X-User:
+      - 3v249hqtptsg744y
+      Vary:
+      - Accept-Encoding
+      Content-Encoding:
+      - gzip
+      Etag:
+      - W/"e98037d382553636756596da41052d99"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 1e67676e-3342-465b-a129-75ec0fe7e68e
+      X-Runtime:
+      - '0.606533'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        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
+        T38DAAD//wMAyP6ZdWkSAAA=
+    http_version: 
+  recorded_at: Fri, 05 May 2017 16:03:57 GMT
+recorded_with: VCR 3.0.3

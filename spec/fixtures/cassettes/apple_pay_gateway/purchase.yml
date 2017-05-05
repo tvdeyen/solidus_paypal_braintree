@@ -1,0 +1,105 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.sandbox.braintreegateway.com/merchants/7rdg92j7bm7fk5h3/transactions
+    body:
+      encoding: UTF-8
+      string: |
+        <?xml version="1.0" encoding="UTF-8"?>
+        <transaction>
+          <amount>10.00</amount>
+          <channel>Solidus</channel>
+          <options>
+            <store-in-vault-on-success type="boolean">true</store-in-vault-on-success>
+            <submit-for-settlement type="boolean">true</submit-for-settlement>
+          </options>
+          <payment-method-nonce>fake-valid-nonce</payment-method-nonce>
+          <type>sale</type>
+        </transaction>
+    headers:
+      Accept-Encoding:
+      - gzip
+      Accept:
+      - application/xml
+      User-Agent:
+      - Braintree Ruby Gem 2.75.0
+      X-Apiversion:
+      - '4'
+      Authorization:
+      - Basic bXdqa2t4d2NwMzJja2huZjphOTI5OGY0M2IzMGM2OTlkYjMwNzJjYzRhMDBmN2Y0OQ==
+      Content-Type:
+      - application/xml
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Date:
+      - Sat, 20 May 2017 07:12:17 GMT
+      Content-Type:
+      - application/xml; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      X-Frame-Options:
+      - SAMEORIGIN
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Authentication:
+      - basic_auth
+      X-User:
+      - 3v249hqtptsg744y
+      Vary:
+      - Accept-Encoding
+      Content-Encoding:
+      - gzip
+      Etag:
+      - W/"54e9f213a01fa23b8384c5fc93fefc9b"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 9acb3c99-3f07-4704-a2eb-7e5e9c9e7efa
+      X-Runtime:
+      - '0.517689'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        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
+    http_version: 
+  recorded_at: Sat, 20 May 2017 07:12:17 GMT
+recorded_with: VCR 3.0.3

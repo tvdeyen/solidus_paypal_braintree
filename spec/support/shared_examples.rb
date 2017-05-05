@@ -1,3 +1,59 @@
+RSpec.shared_examples 'a SolidusPaypalBraintree::PaymentMethod' do
+  describe "saving preference hashes as strings" do
+    subject { gateway.update(update_params) }
+
+    context "with valid hash syntax" do
+      let(:update_params) do
+        {
+          preferred_merchant_currency_map: '{"EUR" => "test_merchant_account_id"}',
+          preferred_paypal_payee_email_map: '{"CAD" => "bruce+wayne@example.com"}'
+        }
+      end
+
+      it "successfully updates the preference" do
+        subject
+        expect(gateway.preferred_merchant_currency_map).to eq({ "EUR" => "test_merchant_account_id" })
+        expect(gateway.preferred_paypal_payee_email_map).to eq({ "CAD" => "bruce+wayne@example.com" })
+      end
+    end
+
+    context "with invalid user input" do
+      let(:update_params) do
+        { preferred_merchant_currency_map: '{this_is_not_a_valid_hash}' }
+      end
+
+      it "raise a JSON parser error" do
+        expect{ subject }.to raise_error(JSON::ParserError)
+      end
+    end
+  end
+
+  describe '#generate_token' do
+    subject { gateway.generate_token }
+
+    context 'connection enabled', vcr: { cassette_name: 'payment_method/generate_token' } do
+      it { is_expected.to be_a(String).and be_present }
+    end
+
+    context 'when token generation is disabled' do
+      around do |ex|
+        allowed = WebMock.net_connect_allowed?
+        WebMock.disable_net_connect!
+        ex.run
+        WebMock.allow_net_connect! if allowed
+      end
+
+      let(:gateway) do
+        gateway = described_class.create!(name: 'braintree')
+        gateway.preferred_token_generation_enabled = false
+        gateway
+      end
+
+      it { is_expected.to match(/Token generation is disabled/) }
+    end
+  end
+end
+
 RSpec.shared_examples "successful response" do
   it 'returns a successful billing response', aggregate_failures: true do
     expect(subject).to be_a ActiveMerchant::Billing::Response
