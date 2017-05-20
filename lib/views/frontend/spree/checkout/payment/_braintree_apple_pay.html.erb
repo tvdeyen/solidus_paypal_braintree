@@ -1,0 +1,6 @@
+<% address = current_order.ship_address %>
+<% id = payment_method.id %>
+
+<% content_for :head do %>
+  <%= javascript_include_tag "spree/checkout/braintree" %>
+<% end %>
